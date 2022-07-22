@@ -242,7 +242,7 @@ function realizarPedido() {
         '%0A' +
         'Ingresá para abonar(Tranqui, te pide ingresar el monto y confirmar gg): link.mercadopago.com.ar/michaelvasquez';
       document.querySelector(
-        '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2216914437/?text=${resumen}">Confirmar pedido</a>`;
+        '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
       localStorage.clear();
     } else {
       if (modalBody.querySelector('#montoEfectivo').value != '') {
@@ -252,7 +252,7 @@ function realizarPedido() {
           '$' +
           modalBody.querySelector('#montoEfectivo').value;
         document.querySelector(
-          '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2216914437/?text=${resumen}">Confirmar pedido</a>`;
+          '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
         localStorage.clear();
       } else {
         Toastify({
