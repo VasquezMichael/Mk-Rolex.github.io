@@ -1,0 +1,111 @@
+p{
+    font-size: 18px;
+}
+.Soy-michael{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center center;
+    color: rgb(184, 180, 180);
+    height: 92vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url("../media/Header.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+
+}
+
+.textHero{
+    margin: auto;
+}
+
+.textHero h2{
+    font-size: 3em;
+    color: burlywood;
+}
+
+.textHero h4{
+    font-size: 2em;
+}
+
+.sobreMi .container{
+    display: flex;
+    flex-direction: row;
+    padding: 150px 12px;
+    text-align: center;
+    color: rgb(184, 180, 180);
+}
+
+.sobreMi h2{
+    font-size: 3em;
+    color: burlywood;;
+
+}
+
+.este-proyecto{
+    color: #fff;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    )
+    ,url("../media/esteProyecto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 30px;
+}
+
+.este-proyecto .container{
+    text-align: center;
+}
+
+.este-proyecto h2{
+    font-size: 3em;
+    color: burlywood;
+    padding-bottom: 40px;
+}
+
+.este-proyecto h3{
+    font-size: 2em;
+    color: burlywood;;
+}
+
+.este-proyecto p{
+  
+    color: rgb(184, 180, 180);;
+}
+
+@media (min-width: 720px) {
+    .sobreMi .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobreMi-text{
+        display: flex;
+        width: 50%;
+        max-width: 600px;
+        padding: 0px 30px;
+        text-align: initial;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .img-container{
+        background-image: url(../media/mike.jpg);
+        background-color: aqua;
+        background-size: cover; 
+        background-position: center center;
+        width: 350px;
+        height: 300px;
+    }
+
+}

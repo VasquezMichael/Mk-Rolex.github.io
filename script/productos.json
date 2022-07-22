@@ -1,0 +1,50 @@
+[
+    {
+        "title": "explorer1",
+        "price": "$600",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/explorer1.jpg"
+    },
+    {
+        "title": "explorer2",
+        "price": "$550",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/explorer2.jpg"
+    },
+    {
+        "title": "explorer3",
+        "price": "$640",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/explorer3.jpg"
+    },
+    {
+        "title": "Day Date 40",
+        "price": "$700",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/day-date40.jpg"
+    },
+    {
+        "title": "Air King",
+        "price": "$560",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/air-king.jpg"
+    },
+    {
+        "title": "Cellini Moonphase",
+        "price": "$600",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/cellini.jpg"
+    },
+    {
+        "title": "Yacht Master 40",
+        "price": "$600",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/yacht-master-40.jpg"
+    },
+    {
+        "title": "Submariner",
+        "price": "$600",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "url": "./media/submariner.jpg"
+    }
+]

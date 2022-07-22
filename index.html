@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/rolex_fav_icon_32x32.jpg" sizes="32x32" type="image/jpg">
+    <title>Mk Rolex</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleHome.css">
+</head>
+<body>
+    <!-- Aqui tenemos el nav que usaremos para desplazarnos entre las opciones home, productos y carrito-->
+    <header class="container-fluid">
+        <ToastContainer />
+        <ul class="nav nav-tabs mb-3 " id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a
+                class="nav-link active" id="pills-home-tab" 
+                data-bs-toggle="pill" 
+                data-bs-target="#pills-home" type="button"
+                role="tab" 
+                aria-controls="pills-home" 
+                aria-selected="true">
+                Home</a>
+            </li>
+
+            <li class="nav-item " role="presentation">
+                <a 
+                class="nav-link" 
+                id="pills-profile-tab" 
+                data-bs-toggle="pill" 
+                data-bs-target="#pills-profile"
+                type="button" 
+                role="tab" 
+                aria-controls="pills-profile" 
+                aria-selected="false">
+                Productos</a>
+
+            <li class="nav-item" role="presentation">
+                <a 
+                class="nav-link" 
+                id="pills-contact-tab" 
+                data-bs-toggle="pill" 
+                data-bs-target="#pills-contact"
+                type="button" 
+                role="tab" 
+                aria-controls="pills-contact" 
+                aria-selected="false">
+                Carrito</a>
+            </li>
+        </ul>
+    </header>
+    <!--Aqui le damos funcionalidad a cada una de las secciones del nav.-->
+    <div class="tab-content" id="pills-tabContent">
+        <div 
+            class="tab-pane fade show active" 
+            id="pills-home" 
+            role="tabpanel" 
+            aria-labelledby="pills-home-tab"
+            >
+            <section class="Soy-michael">
+                <div class="textHero">
+                    <br><h4>Hola,</h4>
+                    <h2>Soy Michael.</h2><br>
+                    <h4>Programador<br> y Técnico electrónico</h4>
+                </div>
+            </section>
+
+            <section class="sobreMi" id="aca">
+                <div class="container">
+                    <div class="img-container">
+                    </div>
+                    <div class="sobreMi-text">
+                        <h2>Sobre Mí</h2>
+                        <p>Soy programador, me recibi de tecnico electronico en la secudaria donde adquirí, entre otras cosas, conocimientos basicos de programación. <br> Estudié hasta segundo año de Licenciatura en Sistemas en la UNLP. Actualmente decidí enfocarme en estudiar desarrollo web y formarme como Desarrollador full Stack</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="este-proyecto">
+                <div class="container">
+                    <h2>Mk Rolex</h2>
+                    <div>
+                        <h3>Html & Css</h3>
+                        <p>
+                            Para el maquetado Html utilicé bootstrap 5 y algunos estilos personalizado.
+                            La seccion Home la realicé en su mayoria de forma "manual", esta parte fué lo ultimo
+                            que decidí agregar al proyecto, ya que me pareció una buena idea tener alguna presentacion personal.
+                            A decir verdad actualmente no cuento con mucha facilidad a la hora de maquetar la web,
+                            por que fue lo que mas me costó, ya que queria generar algo atractivo. Esto me llevó a tener 
+                            que buscar mucha informacion y encontrarme con distintas formas de realizarlo.
+                        </p>
+
+                        <h3>JavaScript</h3>
+                        <p>
+                            Con JavaScript fui avanzando con lo que necesitaba poco a poco, me iba encontrando con
+                            problemas que debia solucionar por lo cual tuve que buscar mucha informacion.
+                            Creo que Mk Rolex cuenta con todas las funcionalidades necesarias y vistas en el curso,
+                            esto me ayudó a aprender a modularizar el código y generar abstracción. <br>
+                            Luego con <span>Ajax y Fetch</span> aprendí mucho sobre las peticiones y trabar con
+                            async, me resulta super interesante el potencial que esto conlleva.
+                            Mas aun trabajar con LocalStorage, esto esta al nivel de mi interes con Ajax, ya que
+                            el poder almacenar informacion y que perdure en el tiempo me parece super necesario.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!--Aqui inicia la seccion de productos -->
+        
+        <div 
+            class="tab-pane fade productos" 
+            id="pills-profile"
+            ole="tabpanel" 
+            aria-labelledby="pills-profile-tab"
+        >
+        <video autoplay ="true"  loop ="true" muted src="./media/new-submariner-video-cover.webm" type="video/mp4" class="video-prod"></video>
+            <h2 class="h4 mt-5">Productos</h2>
+        <!--CARTAS-->    
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 card-container ">
+                <!--Las cartas se renderizann desde el fetch.js-->
+            </div>    
+            
+        </div>
+        
+        <!--Aqui inicia la seccion del carrito-->
+        <div 
+            class="tab-pane fade carrito" 
+            id="pills-contact" 
+            role="tabpanel" 
+            aria-labelledby="pills-contact-tab"
+            >
+            
+        <!--CARRITO-->
+        <br>
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr class="tr-carrito">
+                <th scope="col">#</th>
+                <th scope="col">Productos</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+              </tr> 
+            </thead>
+            <tbody class="tbody">
+                <!--Acá se cargara de forma dinamica el carrito-->
+
+
+
+            </tbody>
+          </table>
+          <br><br>
+          <div class="row mx-4">
+            <div class="col">
+                <h3 class="itemCartTotal"></h3>
+                <div>
+                    <div class="col d-flex justify-content-end">
+                        <!--Lo siguiente se ejecutara cada vez que apretemos el boton comprar--> 
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-primary" id="exampleModalLabel">Confirmacion del pedido</h4>
+                                    
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <h5 class="modal-title text-primary" id="exampleModalLabel">Mis datos</h5>
+                                            <span >Nombre</span>
+                                            <input id="Nombre" type="text" class="form-control" id="recipient-name" placeholder="Nombre:">
+                                            <span>Direccion</span>
+                                            <input id="Direccion" type="text" class="form-control" id="recipient-name" placeholder="Direccion:">
+                                            <span >Telefono</span>
+                                            <input id="Telefono" type="tel" name="phone" class="form-control" id="recipient-name" placeholder="(+54)">
+                                            <!--Metodos de pago-->
+                                            <br>
+                                            <span>Metodo de pago</span> <br>
+                                            <div class="container-pay">    
+                                                <button type="button" class="btn btn-secondary button-pay-efectivo">Efectivo</button>
+                                                <button type="button" class="btn btn-secondary button-pay-tarjeta">Tarjeta</button>    
+                                            </div>
+                                            
+                                            <div class="method-pay">
+                
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label" >¿Queres aclarar algo?</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                    <span>Detalles de la compra</span> <br><br>
+                                    <div class="resumen">
+                                        <p class="resumenCompra"></p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-success button-realizar-pedido" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >Siguiente</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalToggleLabel2">¡Ya casi estamos!</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  Por favor confirme su pedido!
+                                </div>
+                                <div class="modal-footer">
+                                    <a class="btn btn-success button-confirmar-pedido">Confirmar pedido</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                
+                
+                        <a class="btn btn-success button-buy" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Realizar pedido</a>
+            
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark p-2 footer_class">
+        <p class="text-center m-0 text-white-50">Vasquez Michael</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./script/script.js" type="module" ></script>
+    <script type="text/javascript" src="./script/fetch.js"></script>
+</body>
+    
+</html>
