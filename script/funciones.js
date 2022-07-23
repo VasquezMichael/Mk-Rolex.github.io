@@ -5,6 +5,28 @@ const buttonTarjeta = document.querySelector('.button-pay-tarjeta');
 
 let carrito = [];
 
+function alertasSuccess(msj) {
+  Toastify({
+    text: msj,
+    className: 'info',
+    duration: 1200,
+    style: {
+      background: 'linear-gradient(to right, #00b09b, #96c93d)',
+    },
+  }).showToast();
+}
+function alertasDanger(msj) {
+  Toastify({
+    text: msj,
+    className: 'info',
+    duration: 1200,
+    style: {
+      background:
+        'linear-gradient(275deg, rgba(2,0,36,1) 0%, rgba(8,9,9,1) 0%, rgba(133,47,21,1) 60%, rgba(18,19,19,1) 98%)',
+    },
+  }).showToast();
+}
+
 const addToCarritoItem = (e) => {
   const button = e.target;
   const item = button.closest('.card');
@@ -23,14 +45,7 @@ const addToCarritoItem = (e) => {
 
 function addItemCarrito(newItem) {
   const inputElement = tbody.getElementsByClassName('Input-value');
-  Toastify({
-    text: 'Producto añadido al carrito',
-    className: 'info',
-    duration: 1000,
-    style: {
-      background: 'linear-gradient(to right, #00b09b, #96c93d)',
-    },
-  }).showToast();
+  alertasSuccess('Producto añadido al carrito');
 
   for (let index = 0; index < carrito.length; index++) {
     if (carrito[index].title.trim() === newItem.title.trim()) {
@@ -102,15 +117,7 @@ function removeItemCarrito(e) {
   //Una vez que removemos un elemento devemos volver a calcular el total
   precioTotal();
 
-  Toastify({
-    text: 'Producto removido del carrito',
-    className: 'info',
-    duration: 1000,
-    style: {
-      background:
-        'linear-gradient(275deg, rgba(2,0,36,1) 0%, rgba(8,9,9,1) 0%, rgba(133,47,21,1) 60%, rgba(18,19,19,1) 98%)',
-    },
-  }).showToast();
+  alertasDanger('Producto removido del carrito');
 }
 
 function modificarCantidad(e) {
@@ -236,46 +243,34 @@ function armarStringResumen() {
 
 function realizarPedido() {
   let resumen = armarStringResumen();
-  if (validarDatosPersonales() && validarMetodoDePago()) {
-    if (Object.values(buttonTarjeta.classList).includes('btn-success')) {
-      resumen +=
-        '%0A' +
-        'Ingresá para abonar(Tranqui, te pide ingresar el monto y confirmar gg): link.mercadopago.com.ar/michaelvasquez';
-      document.querySelector(
-        '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
-      localStorage.clear();
-    } else {
-      if (modalBody.querySelector('#montoEfectivo').value != '') {
+  if (carrito.length != 0) {
+    if (validarDatosPersonales() && validarMetodoDePago()) {
+      if (Object.values(buttonTarjeta.classList).includes('btn-success')) {
         resumen +=
           '%0A' +
-          'Abono en efectivo con: ' +
-          '$' +
-          modalBody.querySelector('#montoEfectivo').value;
+          'Ingresá para abonar(Tranqui, te pide ingresar el monto y confirmar gg): link.mercadopago.com.ar/michaelvasquez';
         document.querySelector(
-          '.button-confirmar-pedido').innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
+          '.button-confirmar-pedido'
+        ).innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
         localStorage.clear();
       } else {
-        Toastify({
-          text: 'Por favor complete todos los campos!',
-          className: 'info',
-          duration: 1500,
-          style: {
-            background:
-              'linear-gradient(275deg, rgba(2,0,36,1) 0%, rgba(8,9,9,1) 0%, rgba(133,47,21,1) 60%, rgba(18,19,19,1) 98%)',
-          },
-        }).showToast();
+        if (modalBody.querySelector('#montoEfectivo').value != '') {
+          resumen +=
+            '%0A' +
+            'Abono en efectivo con: ' +
+            '$' +
+            modalBody.querySelector('#montoEfectivo').value;
+          document.querySelector(
+            '.button-confirmar-pedido'
+          ).innerHTML = `<a class="btn btn-success button-confirmar-pedido" href="https://wa.me/2213507949/?text=${resumen}">Confirmar pedido</a>`;
+          localStorage.clear();
+        } else {
+          alertasDanger('Por favor ingrese el monto con el que abonará!');
+        }
       }
+    } else {
+      alertasDanger('Por favor complete todos los campos!');
     }
-  } else {
-    Toastify({
-      text: 'Por favor complete todos los campos',
-      className: 'info',
-      duration: 1500,
-      style: {
-        background:
-          'linear-gradient(275deg, rgba(2,0,36,1) 0%, rgba(8,9,9,1) 0%, rgba(133,47,21,1) 60%, rgba(18,19,19,1) 98%)',
-      },
-    }).showToast();
   }
 }
 
