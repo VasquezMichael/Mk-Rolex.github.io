@@ -269,7 +269,7 @@ function realizarPedido() {
         }
       }
     } else {
-      alertasDanger('Por favor complete todos los campos!');
+      alertasDanger('Por favor complete todos los campos');
     }
   }
 }
